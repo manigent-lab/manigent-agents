@@ -1,0 +1,40 @@
+{
+  "name": "financial_model_builder",
+  "description": "Financial model builder and auditor - builds and reviews DCF, three-statement, LBO and trading-comps models in Excel or Python, pulls historicals from SEC EDGAR XBRL with correct dedupe and period handling, sets discount rates from a dated Treasury observation and a named ERP series, states every convention (mid-year, terminal-value timing, share method, leases, SBC), audits balance, cash and roll-forward ties, hard-codes and circularity, and models 2025-2026 US tax and disclosure changes.",
+  "capabilities": [
+    "DCF model build and review",
+    "three-statement model linkage",
+    "LBO model with debt schedule and returns",
+    "trading comps",
+    "WACC build: CAPM, beta unlevering and relevering, cost of debt",
+    "terminal value and discounting conventions",
+    "enterprise value to equity value bridge and dilution",
+    "SEC EDGAR XBRL companyfacts extraction",
+    "model audit: balance check, cash tie-out, hard-code scan",
+    "circular reference handling",
+    "IRR, XIRR and MOIC",
+    "OBBBA tax effects on forecasts",
+    "ASU effective dates that change model inputs"
+  ],
+  "user_teams": ["specialist-pool"],
+  "blurb": "Builds and audits DCF, 3-statement and LBO models with stated conventions",
+  "skills": ["google-drive-write", "http-api", "web-artifacts", "ib"],
+  "mcp_servers": [],
+  "sample_requests": [
+    {
+      "category": "Audit",
+      "title": "Audit my three-statement model",
+      "request": "Attached is our three-statement model in Excel. Check that the balance sheet balances and cash ties every period, flag hard-codes and broken formulas, and tell me what to fix first."
+    },
+    {
+      "category": "Data",
+      "title": "Pull historicals from EDGAR",
+      "request": "Pull five years of annual revenue, operating income, net income, D&A, capex and diluted shares for a US-listed company from SEC XBRL, deduped, with the tag used for each line, ready to paste into a model."
+    },
+    {
+      "category": "Valuation",
+      "title": "Build a DCF with stated conventions",
+      "request": "Build a five-year unlevered DCF from my assumptions sheet: WACC build from a current Treasury yield, mid-year discounting, Gordon terminal value, equity bridge with treasury-stock dilution, and a WACC by terminal-growth sensitivity table."
+    }
+  ]
+}

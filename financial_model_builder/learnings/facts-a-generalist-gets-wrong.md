@@ -1,0 +1,22 @@
+# Field knowledge: Financial model builder
+
+Compiled 2026-10-11. Covers building and auditing DCF, 3-statement, LBO and comps models in Excel/Python, sourcing inputs from SEC XBRL APIs, Damodaran datasets and the US Treasury curve, and the 2025–2026 accounting and tax changes that alter forecasts.
+Original text by the Manigent seed-pool build (MIT). US government material quoted where marked; Google Search Central material (CC BY 4.0) attributed where quoted.
+
+## Facts a generalist gets wrong
+**Consult when:** setting a discount rate, pulling XBRL data, or modelling post-2025 US tax and disclosure changes.
+Rates are not listed here: the riskfree rate and the ERP are fetched for the valuation date with the `market-inputs` skill, never quoted from memory. Facts on the 2026 Treasury and Damodaran values were removed on 2026-10-11 for that reason.
+1. Damodaran nets a US default spread (0.22%) out of the Treasury rate for an "adjusted" riskfree rate. If you do the same, add the spread back to the ERP — [Damodaran home](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm), as of 2026-10-01.
+2. In companyfacts, `fy`/`fp` belong to the reporting filing, not the data period. One FY2023 value appears under fy 2023, 2024 and 2025 — [Apple companyfacts](https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json), checked 2026-10-11.
+3. Only one duplicate carries the `frame` key: the last-filed fact that best fits a calendar period — [SEC EDGAR APIs](https://www.sec.gov/search-filings/edgar-application-programming-interfaces), as of 2026-10-11.
+4. The frames URL unit is `USD-per-shares`, while companyfacts keys the same unit as `USD/shares` — [SEC EDGAR APIs](https://www.sec.gov/search-filings/edgar-application-programming-interfaces), as of 2026-10-11.
+5. SEC fair access: at most 10 requests/s, plus a User-Agent with a contact email. data.sec.gov has no CORS — [Accessing EDGAR data](https://www.sec.gov/os/accessing-edgar-data), as of 2026-10-11.
+6. OBBBA (P.L. 119-21) made 100% bonus depreciation permanent for property acquired after 2025-01-19. Interim guidance is Notice 2026-11 — [IRS](https://www.irs.gov/newsroom/treasury-irs-issue-guidance-on-the-additional-first-year-depreciation-deduction-amended-as-part-of-the-one-big-beautiful-bill), as of 2026-10-11.
+7. Under §174A, domestic R&E is deductible immediately for tax years beginning after 2024. Foreign R&E is still amortized over 15 years — [IRS Form 6765 instructions](https://www.irs.gov/pub/irs-pdf/i6765.pdf), as of Dec 2025.
+8. Domestic R&E capitalized in 2022–2024 and still unamortized can be deducted in the first post-2024 year or over 2 years. Small businesses (≤ $31M receipts) may instead apply §174A retroactively — [Rev. Proc. 2025-28](https://www.irs.gov/pub/irs-drop/rp-25-28.pdf), as of 2025.
+9. §163(j) ATI adds back D&A again (an EBITDA-like base) for tax years beginning after 2024. CFC inclusions are excluded from ATI for tax years beginning after 2025 — [IRS 163(j) Q&A](https://www.irs.gov/newsroom/questions-and-answers-about-the-limitation-on-the-deduction-for-business-interest-expense), as of 2026-10-11.
+10. ASU 2024-03 (DISE) applies to PBE fiscal years beginning after 2026-12-15 and interims after 2027-12-15, so calendar filers first apply it in the FY2027 10-K — [PwC Viewpoint](https://viewpoint.pwc.com/dt/us/en/pwc/effective_dates_of_f/public_companies/public_companies_US/standards_effective__US.html), as of 2026-10-11.
+11. ASU 2023-09 tax disclosures first appear in calendar-2025 10-Ks, covering annual periods beginning after 2024-12-15 — [PwC Viewpoint](https://viewpoint.pwc.com/dt/us/en/pwc/effective_dates_of_f/public_companies/public_companies_US/standards_effective__US.html), as of 2026-10-11.
+12. ASU 2025-06 drops the project-stage model for internal-use software. PBEs apply it for fiscal years beginning after 2027-12-15 — [PwC Viewpoint](https://viewpoint.pwc.com/dt/us/en/pwc/effective_dates_of_f/public_companies/public_companies_US/standards_effective__US.html), as of 2026-10-11.
+13. Excel iterative calc defaults: 100 iterations / 0.001 change. XIRR: actual/365, 10% guess, #NUM! after 100 tries — [Microsoft](https://support.microsoft.com/en-us/office/remove-or-allow-a-circular-reference-in-excel-8540bd0f-6e97-4483-bcf7-1b49cd50d123), [XIRR](https://support.microsoft.com/en-us/office/xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d), as of 2026-10-11.
+

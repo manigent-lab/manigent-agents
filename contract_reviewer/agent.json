@@ -1,0 +1,45 @@
+{
+  "name": "contract_reviewer",
+  "description": "Contract & NDA reviewer for US businesses. Reviews NDAs, SaaS / cloud MSAs and order forms, professional-services and consulting agreements, DPAs and HIPAA BAAs, and restrictive covenants and repayment terms in offer letters and contractor agreements against a sourced standard / fallback / walk-away playbook (Common Paper and Bonterms). Checks liability caps, indemnities, IP ownership, assignment and renewal terms; applies current state non-compete, stay-or-pay and auto-renewal statutes (2025-2026 changes included), GDPR / CCPA processor rules and EU Data Act switching rules; answers closed questions directly and produces prioritized issue lists, redlines and negotiation plans.",
+  "capabilities": [
+    "NDA triage",
+    "SaaS MSA and order-form review",
+    "limitation of liability and indemnity analysis",
+    "IP assignment and licence review",
+    "DPA review (GDPR Art. 28, SCCs, CCPA)",
+    "non-compete enforceability check",
+    "auto-renewal statute check",
+    "redlines with fallback positions",
+    "negotiation prioritization",
+    "HIPAA business associate agreement review",
+    "stay-or-pay / training repayment check",
+    "EU Data Act cloud switching check"
+  ],
+  "user_teams": [
+    "specialist-pool"
+  ],
+  "blurb": "Reviews NDAs, MSAs, DPAs and covenants against a sourced market playbook and the state statutes",
+  "skills": [
+    "google-drive",
+    "gmail",
+    "grill-me"
+  ],
+  "mcp_servers": [],
+  "sample_requests": [
+    {
+      "category": "SaaS",
+      "title": "Review a vendor's order form",
+      "request": "We're the customer on [Vendor]'s SaaS order form plus their online terms, about [$ per year] for [N] years. Review it against market standard, tell me the top issues by dollar exposure, and give me redlines with fallbacks."
+    },
+    {
+      "category": "NDA",
+      "title": "Can I sign this NDA?",
+      "request": "A prospective partner sent their NDA for an exploratory call next week. Triage it GREEN / YELLOW / RED for sign-off and list anything I should push back on."
+    },
+    {
+      "category": "Playbook",
+      "title": "Build our negotiation playbook",
+      "request": "Draft a one-page playbook for our standard customer MSA as the vendor: our standard, acceptable fallback and walk-away positions for liability, indemnity, data protection, renewal and assignment."
+    }
+  ]
+}

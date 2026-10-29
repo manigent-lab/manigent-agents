@@ -1,0 +1,356 @@
+{
+  "name": "Manigent Specialist Pool",
+  "icon": "🧪",
+  "color": "#2f6f4f",
+  "cats": [
+    "work"
+  ],
+  "blurb": "Specialist agents that beat a generalist on held-out domain tasks.",
+  "_generated": "by scripts/build_agent_pool.py from agents/index.json; do not edit",
+  "agents": [
+    {
+      "name": "contract_reviewer",
+      "description": "Contract & NDA reviewer for US businesses. Reviews NDAs, SaaS / cloud MSAs and order forms, professional-services and consulting agreements, DPAs and HIPAA BAAs, and restrictive covenants and repayment terms in offer letters and contractor agreements against a sourced standard / fallback / walk-away playbook (Common Paper and Bonterms). Checks liability caps, indemnities, IP ownership, assignment and renewal terms; applies current state non-compete, stay-or-pay and auto-renewal statutes (2025-2026 changes included), GDPR / CCPA processor rules and EU Data Act switching rules; answers closed questions directly and produces prioritized issue lists, redlines and negotiation plans.",
+      "capabilities": [
+        "NDA triage",
+        "SaaS MSA and order-form review",
+        "limitation of liability and indemnity analysis",
+        "IP assignment and licence review",
+        "DPA review (GDPR Art. 28, SCCs, CCPA)",
+        "non-compete enforceability check",
+        "auto-renewal statute check",
+        "redlines with fallback positions",
+        "negotiation prioritization",
+        "HIPAA business associate agreement review",
+        "stay-or-pay / training repayment check",
+        "EU Data Act cloud switching check"
+      ],
+      "user_teams": [
+        "specialist-pool"
+      ],
+      "blurb": "Reviews NDAs, MSAs, DPAs and covenants against a sourced market playbook and the state statutes",
+      "skills": [
+        "google-drive",
+        "gmail",
+        "grill-me"
+      ],
+      "mcp_servers": [],
+      "sample_requests": [
+        {
+          "category": "SaaS",
+          "title": "Review a vendor's order form",
+          "request": "We're the customer on [Vendor]'s SaaS order form plus their online terms, about [$ per year] for [N] years. Review it against market standard, tell me the top issues by dollar exposure, and give me redlines with fallbacks."
+        },
+        {
+          "category": "NDA",
+          "title": "Can I sign this NDA?",
+          "request": "A prospective partner sent their NDA for an exploratory call next week. Triage it GREEN / YELLOW / RED for sign-off and list anything I should push back on."
+        },
+        {
+          "category": "Playbook",
+          "title": "Build our negotiation playbook",
+          "request": "Draft a one-page playbook for our standard customer MSA as the vendor: our standard, acceptable fallback and walk-away positions for liability, indemnity, data protection, renewal and assignment."
+        }
+      ],
+      "discoverable": false,
+      "knowledge_dir": "./knowledge",
+      "pool": "manigent-agents",
+      "bundle": {
+        "dir": "contract_reviewer",
+        "files": [
+          {
+            "path": "knowledge/auto-renewal-statutes.tsv",
+            "sha256": "b4318ba74bcac256be3815571585a68608297052eaf7b70236027083d95b5deb"
+          },
+          {
+            "path": "knowledge/common-paper-csa/CSA-2.1.md",
+            "sha256": "ff8abae90e99e465bfc89ad5e8da63a52299f9aa40034905afca62b7f8c481a0"
+          },
+          {
+            "path": "knowledge/common-paper-csa/CSA-3.0.md",
+            "sha256": "cd8015f5f0a2030b424acd5f3efbaef12ffc0a6e269d57db6b8aad42bb1d5e28"
+          },
+          {
+            "path": "knowledge/noncompete-enforceability-2026.tsv",
+            "sha256": "dfe8376c124927c5aa549b193ed3f97b1ecc47e0b2350fcc8a1b157fc85d35da"
+          },
+          {
+            "path": "knowledge/standard-positions-cp-bonterms.tsv",
+            "sha256": "78efd2d46529a6f70764f9fa64a436533f94bcf5da0f402f6856364028650754"
+          },
+          {
+            "path": "learnings/INDEX.md",
+            "sha256": "7bf88bd5f06548cc7333255a31c24fff404b1de94b48d2b9934bdc95364fda41"
+          },
+          {
+            "path": "learnings/assignment-termination-law-venue.md",
+            "sha256": "ccacae606bdc2262618826fa73f3b8729e0aa4c25096cc475af36662824d0986"
+          },
+          {
+            "path": "learnings/auto-renewal-statutes.md",
+            "sha256": "fcfc51d84442284a93e9bcfb467f53bc9b7540004ca3717b2569a37dac62f489"
+          },
+          {
+            "path": "learnings/data-processing-checklist.md",
+            "sha256": "e587ee8264dd7a9d15ad0bb31ed0c0683f14c2a98982b2b025e4db3ca1b92f27"
+          },
+          {
+            "path": "learnings/eu-data-act-cloud-switching.md",
+            "sha256": "3ff80afe15ec39cb312e56012b68ca2db3e90b3960911c0ce2dea565d9eaea10"
+          },
+          {
+            "path": "learnings/gaps-and-sources.md",
+            "sha256": "771bcefc610a55bc5f48e3075cf2ce0d70245dd722c0f13578b3ebb55b335c8d"
+          },
+          {
+            "path": "learnings/hipaa-baa.md",
+            "sha256": "122eb79e509b9bbf3ec4e208303a76f554fc0529763fe5133a81b0d2a140a935"
+          },
+          {
+            "path": "learnings/ip-assignment-licences-residuals.md",
+            "sha256": "e8e0e1036a91bdf45a63af38724032e2da951c67a22a5623ed814e0ff257a338"
+          },
+          {
+            "path": "learnings/liability-and-indemnity.md",
+            "sha256": "eaa320621ba06f4080c3349abcc4f221cede9b724b2cd49027ef6fa0e9ca6544"
+          },
+          {
+            "path": "learnings/log.md",
+            "sha256": "01e1bb5a32f36ac448926c8b4a0ad6c36305e98a8137076d63e0b7d47dffde12"
+          },
+          {
+            "path": "learnings/non-competes.md",
+            "sha256": "a8e28a967c55ad834380fd17697bcdd382027503688e3451a5461ea35df2d9a5"
+          },
+          {
+            "path": "learnings/review-procedure-and-escalation.md",
+            "sha256": "7f0d68d9ebfccadbcf94d5480fcd1d021bd6ccd28421e1f717eb2a8300bfe69c"
+          },
+          {
+            "path": "learnings/standard-position-playbook.md",
+            "sha256": "d693ae791093e6e495f37854ecf3738bbc3c8a6223e0072b5b4fe6949247b421"
+          },
+          {
+            "path": "role.md",
+            "sha256": "3ea48be910f0f70a11765c3702ce8649e6aa14e8d93c93b6098424ba8379d4cc"
+          },
+          {
+            "path": "skills/clause-extractor/SKILL.md",
+            "sha256": "8d58d65127ad372ac78fa7e1cb86a7ea8c862f5c046cb4d3c73ffd3f25d940b7"
+          },
+          {
+            "path": "skills/clause-extractor/clause_extractor.py",
+            "sha256": "b594b930bcbe4a76eb3314109803dda784b88ff70de97be0594c1001d7927dc0"
+          },
+          {
+            "path": "skills/cp-standard/SKILL.md",
+            "sha256": "3ae51504087c6f450f4f02717664ae3294e104abef02aec219a3b55cf5cdfd2d"
+          },
+          {
+            "path": "skills/cp-standard/cp_standard.py",
+            "sha256": "3c32c110047f21547a6660aa44862c3eabb4bfa032fc575f9813e219a01f710e"
+          },
+          {
+            "path": "skills/cp-standard/test_cp_standard.py",
+            "sha256": "e5070be2e597151748d26c83b03733aeb189343caae9b339aabe4a4719b65f0f"
+          },
+          {
+            "path": "skills/docx-redline/SKILL.md",
+            "sha256": "b19653deeed7d86f5f0fce6bd09002b19443a550a6a91f76deade2cde131f08b"
+          },
+          {
+            "path": "skills/docx-redline/docx_redline.py",
+            "sha256": "31f65e023e52302845ade12c48e87736072368c4ff59308bb462090154527f14"
+          }
+        ]
+      }
+    },
+    {
+      "name": "financial_model_builder",
+      "description": "Financial model builder and auditor - builds and reviews DCF, three-statement, LBO and trading-comps models in Excel or Python, pulls historicals from SEC EDGAR XBRL with correct dedupe and period handling, sets discount rates from a dated Treasury observation and a named ERP series, states every convention (mid-year, terminal-value timing, share method, leases, SBC), audits balance, cash and roll-forward ties, hard-codes and circularity, and models 2025-2026 US tax and disclosure changes.",
+      "capabilities": [
+        "DCF model build and review",
+        "three-statement model linkage",
+        "LBO model with debt schedule and returns",
+        "trading comps",
+        "WACC build: CAPM, beta unlevering and relevering, cost of debt",
+        "terminal value and discounting conventions",
+        "enterprise value to equity value bridge and dilution",
+        "SEC EDGAR XBRL companyfacts extraction",
+        "model audit: balance check, cash tie-out, hard-code scan",
+        "circular reference handling",
+        "IRR, XIRR and MOIC",
+        "OBBBA tax effects on forecasts",
+        "ASU effective dates that change model inputs"
+      ],
+      "user_teams": [
+        "specialist-pool"
+      ],
+      "blurb": "Builds and audits DCF, 3-statement and LBO models with stated conventions",
+      "skills": [
+        "google-drive-write",
+        "http-api",
+        "web-artifacts",
+        "ib"
+      ],
+      "mcp_servers": [],
+      "sample_requests": [
+        {
+          "category": "Audit",
+          "title": "Audit my three-statement model",
+          "request": "Attached is our three-statement model in Excel. Check that the balance sheet balances and cash ties every period, flag hard-codes and broken formulas, and tell me what to fix first."
+        },
+        {
+          "category": "Data",
+          "title": "Pull historicals from EDGAR",
+          "request": "Pull five years of annual revenue, operating income, net income, D&A, capex and diluted shares for a US-listed company from SEC XBRL, deduped, with the tag used for each line, ready to paste into a model."
+        },
+        {
+          "category": "Valuation",
+          "title": "Build a DCF with stated conventions",
+          "request": "Build a five-year unlevered DCF from my assumptions sheet: WACC build from a current Treasury yield, mid-year discounting, Gordon terminal value, equity bridge with treasury-stock dilution, and a WACC by terminal-growth sensitivity table."
+        }
+      ],
+      "discoverable": false,
+      "knowledge_dir": "./knowledge",
+      "pool": "manigent-agents",
+      "bundle": {
+        "dir": "financial_model_builder",
+        "files": [
+          {
+            "path": "knowledge/treasury-par-yield-curve-2026.csv",
+            "sha256": "0e7164f6f348497a4541b61ce9b3e76fc00902c988540d08332a7d956350c764"
+          },
+          {
+            "path": "knowledge/treasury-par-yield-curve-README.md",
+            "sha256": "cf3deb584906c921e7d43d3c48060e0da757bb3c3412bc3b9356acfadad77adc"
+          },
+          {
+            "path": "learnings/INDEX.md",
+            "sha256": "b96b84cececaa1f3a53173e9008503421a43ca6b1b235a2beb0f2118732b8e4b"
+          },
+          {
+            "path": "learnings/asu-standards-changes.md",
+            "sha256": "a543cbe5afbdc7add5fe5711029a5e237217628ddfdda3fb62f85ac07fe084b0"
+          },
+          {
+            "path": "learnings/data-gaps-and-sources.md",
+            "sha256": "e85a799c513a8baddf592851398b9ddc1d897480cc1882e3a29a57f022fd8224"
+          },
+          {
+            "path": "learnings/dcf-conventions.md",
+            "sha256": "198a0a458ba62570bd095d50605751ad133384e150687ebebd05cf6d61edf910"
+          },
+          {
+            "path": "learnings/ev-to-equity-bridge.md",
+            "sha256": "56026fc8b4eafd0d9080e9372f085565478a37ca62d14c206f7b33095cb16d3d"
+          },
+          {
+            "path": "learnings/facts-a-generalist-gets-wrong.md",
+            "sha256": "f03ee7b2e7c69a41f0d1392e1b8ed0e3e6b8dd80dd193f7d1b7a66f8d7ab7a96"
+          },
+          {
+            "path": "learnings/lbo-mechanics.md",
+            "sha256": "18feb974a7cb75419efe415a8141c5513df879d23011e3c0a014086fb309fcf2"
+          },
+          {
+            "path": "learnings/log.md",
+            "sha256": "502abeb3fdf0917e62c027567e1281f698cc9f2de53711dbca30755ca9704730"
+          },
+          {
+            "path": "learnings/obbba-tax-in-models.md",
+            "sha256": "b14e4b20612bd6645bacdb383057a14dffc13be0e9417ad569f7f8e427b41bba"
+          },
+          {
+            "path": "learnings/sec-edgar-apis.md",
+            "sha256": "d9d2d3f8960a39abf4fc3b5e2ecd86c3c806ba9736accc7f5b008c3e3f0676ba"
+          },
+          {
+            "path": "learnings/three-statement-linkage-and-audit.md",
+            "sha256": "acfeee52a17a23655cdeb0e63df791220c3367610c55c4823c2e9b0defb1ae5a"
+          },
+          {
+            "path": "learnings/us-gaap-tag-mapping.md",
+            "sha256": "ab696ebd90259b1c6b8378e1dfc2f5fd3e9c59cfc9a1c351e4a1dd9f117752b4"
+          },
+          {
+            "path": "learnings/wacc-inputs.md",
+            "sha256": "4df4b21303f0004131e1d4362f0d13a22fbe668421f0d1e42e47b31131e9dbbe"
+          },
+          {
+            "path": "learnings/xbrl-dedupe-and-periods.md",
+            "sha256": "192a12fb5513603d71ef7b9149ea651f8a3a6b59212454f3d9a47e763ad9bf93"
+          },
+          {
+            "path": "role.md",
+            "sha256": "e3645a9119e2709222970c27876b8a3422cb18004f571b75e292ab96f59f1ff5"
+          },
+          {
+            "path": "skills/dcf-validator/SKILL.md",
+            "sha256": "dd8ce207fa62310fa530eb44b80b60bbf532649866f9c12c76913cc5f156492c"
+          },
+          {
+            "path": "skills/dcf-validator/dcf_validator.py",
+            "sha256": "283cb1e079bec43cd293dccbc9244278df0d8a7a69e6fccf64632f0886488701"
+          },
+          {
+            "path": "skills/dcf-validator/test_dcf_validator.py",
+            "sha256": "639922ddb6d35c43a3064e453760fbafb5f7e5152c0b3773b675f5f780c55a12"
+          },
+          {
+            "path": "skills/edgar-facts/SKILL.md",
+            "sha256": "e69d4501fd8653144a72b8a0d1bb71f4259b59cca5b8713a2f9c6bf3494339f5"
+          },
+          {
+            "path": "skills/edgar-facts/edgar_facts.py",
+            "sha256": "a2a6d350751412c9f799b08d9b647ae1625b1c633dbad39fd9697790cb5956f4"
+          },
+          {
+            "path": "skills/edgar-facts/test_edgar_facts.py",
+            "sha256": "88f50c24caab821a8080587b06124788c10eba34f354ac3527d8bc99baeef756"
+          },
+          {
+            "path": "skills/market-inputs/SKILL.md",
+            "sha256": "13a6980dbe677dbc35335943eaba89b453331b97080723f6ebfc592ba6086523"
+          },
+          {
+            "path": "skills/market-inputs/market_inputs.py",
+            "sha256": "52fe4b7ef94385577c5cbba54dadae71374a1ad202092c795a9624a497447a75"
+          },
+          {
+            "path": "skills/market-inputs/test_market_inputs.py",
+            "sha256": "65fd0ef62e5bcad2eb049e39409a034b8bb4a1abf9f3bb381c412fd7ce9cc2b7"
+          },
+          {
+            "path": "skills/model-auditor/SKILL.md",
+            "sha256": "833305bc152decdf97d3ccc04e02e869d50c6d51cb67972f25bbcceaa0ed2937"
+          },
+          {
+            "path": "skills/model-auditor/model_auditor.py",
+            "sha256": "f72fbb7d27ffccd575f3c435448d05aee1068182cb5f387253b3778fd27e03d2"
+          },
+          {
+            "path": "skills/model-auditor/test_model_auditor.py",
+            "sha256": "2e8876d2e9cb68c6cdf465caf454f8df01663d3c3308c29f74b078659a02c73f"
+          },
+          {
+            "path": "skills/valuation-calc/SKILL.md",
+            "sha256": "197d0383d1310e929a859b1770797b91058324b243bc8cc3516e9308b36a6766"
+          },
+          {
+            "path": "skills/valuation-calc/test_valuation_calc.py",
+            "sha256": "d7be0154df3bb00110453ae606833037b85d4a88ebf059390dd29c2f4c6670c5"
+          },
+          {
+            "path": "skills/valuation-calc/valuation_calc.py",
+            "sha256": "ac4e8bc6201302843258fe0e2a83cb030c0453fef389dd73d41a8a5117559291"
+          },
+          {
+            "path": "skills/xlsx-io/SKILL.md",
+            "sha256": "f3ae34f395d7946b9359220fae30057358b984750b5e061eb71700242dd4ce1d"
+          }
+        ]
+      }
+    }
+  ]
+}

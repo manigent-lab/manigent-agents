@@ -1,0 +1,52 @@
+Manigent specialist agent pool
+Copyright (c) 2026 Manigent Contributors
+
+Original content in this directory is licensed under the MIT License (see
+LICENSE). Some agent folders adapt third-party material. Each adapted file keeps
+its own license, and every adapted source is listed, pinned to a commit, with
+its author and license in that agent's SOURCES.md.
+
+Files adapted from Apache-2.0 sources are licensed under the Apache License,
+Version 2.0; the full license text ships in LICENSES/Apache-2.0.txt. Each
+adapted file carries a notice stating that it was modified.
+
+Apache-2.0 sources require an attribution entry here. Add one block per
+source repository, in this form:
+
+  <org>/<repo> (Apache-2.0)
+  Copyright <year> <author>
+  Adapted in: agents/<name>/<file>
+
+Third-party attributions
+------------------------
+anthropics/knowledge-work-plugins (Apache-2.0)
+  Copyright 2025 Anthropic, PBC
+  Adapted in: agents/contract_reviewer/role.md,
+  agents/seo_auditor/role.md,
+  agents/bio_research_analyst/role.md
+
+anthropics/financial-services (Apache-2.0)
+  Copyright 2025 Anthropic, PBC
+  Adapted in: agents/financial_model_builder/role.md,
+  agents/financial_model_builder/skills/model-auditor/SKILL.md,
+  agents/financial_model_builder/skills/dcf-validator/SKILL.md,
+  agents/financial_model_builder/skills/xlsx-io/SKILL.md
+
+K-Dense-AI/scientific-agent-skills (MIT)
+  Copyright (c) 2025 K-Dense Inc.
+  License text: LICENSES/MIT-K-Dense.txt
+  Copied unchanged in: agents/grant_writer/knowledge/templates/budget_justification_template.md,
+  agents/grant_writer/knowledge/templates/nih_specific_aims_template.md,
+  agents/grant_writer/knowledge/templates/nsf_project_summary_template.md
+  Adapted in: agents/grant_writer/role.md,
+  agents/grant_writer/skills/budget-calc/budget_calc.py
+
+CPT (Current Procedural Terminology)
+  CPT codes, descriptions and other data only are copyright 2025 American
+  Medical Association. All rights reserved. CPT is a registered trademark of
+  the AMA. Appears as code numbers only in:
+  agents/medical_billing/knowledge/ncci/mue-2026q4-cpt-office-common.tsv
+
+CDT (Current Dental Terminology)
+  CDT codes are copyright American Dental Association. Appear as code numbers
+  only in: agents/medical_billing/knowledge/ncci/mue-2026q4-hcpcs-level2.tsv
